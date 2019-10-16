@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<!--meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="provider of halls & buildings">
+  	<meta name="keywords" content="RNA-D HALL & CONVENTION CENTER,convention centre, exhibition, planery, assembly , meeting">
+  	<meta name="author" content="DPW2018-2_D2">
+  	<!--link css -->
+	<link rel="stylesheet" type="text/css" href="style.css"><!--title web -->
+	<title>RNA-D Hall & Convention Center</title>
+	<!--link js -->
+	<script src="jsvalidasi.js"></script>
+
+</head>
+<body>
+	<!-- HEADERR -->
+	<header>
+		<div class="container">
+
+			<div class="logo">
+				<b>RNA-D HALL & CONVENTION CENTER</b>
+				<br>
+				<div class="motto">" Zero Complain & No Mistake "</div>
+			</div>
+		</div>
+	</header>
+	<!-- END header -->
+	<!-- Navigasi Menu -->
+	<nav>
+		<div class="container">
+			<ul>
+				<li><a  href="index.html">HOME</a></li> <!-- menu home-->
+				<li><a class="nav-current" href="addprogram.html">ADD PROGRAM</a></li><!-- menu addprogram-->
+				<li><a href="imagereference.html">IMAGES REFERENCES</a></li><!-- menu imagerefences-->
+				<li><a href="aboutus.html">ABOUT US</a></li><!-- menu about us -->
+			</ul>
+		</div>
+	</nav>
+	<!-- END navigasi menu-->
+
+	<!-- content form-->
+	<div class="content-add">
+		<div class="container">
+			<h1>ADD PROGRAM</h1>
+			<hr>
+			<!-- FORM-->
+			<form action="addprogram.html" method="post" name="formADDPROGRAM" onsubmit="return validasi();">
+				<!-- Data Exhibitor -->
+				<h2>Exhibitor</h2><hr>
+				<h3>I. Penyelenggara Event</h3>
+				<label for="nameevent">Nama Event:</label>
+				<br>
+				<!-- text box nama event -->
+				<input type="text" name="nameevent" placeholder="nama event" id="nameevent"><b id="pesan0"></b>
+				<br>
+				<label for="tipepenyelenggara"> Penyelenggara :	 </label>
+				<br>
+				<!-- dropdown tipe eventpenyelenggara -->
+				<select id="tipepenyelenggara" name="tipepenyelenggara">
+					<option value="0">-- Pilih --</option>
+					<option value="1">Perorangan</option>
+					<option value="2">Perusahaan</option>
+					<option value="3">Instansi Pemerintah</option>
+					<option value="4">Instansi Swasta</option>
+					<option value="5">Lembaga Sosial</option>
+				</select><b id="pesan-2"></b>
+				<br>
+				<label for="tipeevent">Jenis Event :</label>
+				<br>
+				<!-- dropdown tipe event -->
+				<select id="tipeevent" name="tipeevent">
+					<option value="0">-- Pilih --</option>
+					<option value="1">Konferensi</option>
+					<option value="2">Pernikahan</option>
+					<option value="3">Wisuda</option>
+					<option value="4">Konser Music</option>
+					<option value="5">Kegiatan Sosial</option>
+					<option value="6">Pernikahan</option>
+					<option value="7">Rapat terbuka</option>
+				</select><b id="pesan-1"></b>
+				<hr>
+				<h3>II. Penanggung Jawab </h3>
+				<!--nama penanggung jawab-->
+				<label for="pjname">Nama :</label>
+				<br>
+				<input type="text" placeholder="nama penanggung jawab" name="pjname" id="pjname"><b id="pesan1" ></b>
+				<br>
+				<!--jabatan penanggung jawab-->
+				<label for="pjjabatan">Posisi/Jabatan :</label>
+				<br>
+				<input type="text" placeholder="jabatan" name="pjjabatan" id="pjjabatan"><b id="pesan2" ></b>
+				<br>
+				<!--no telp penanggung jawab-->
+				<label for="pjtelepon">No Telepon :</label>
+				<br>
+				<input type="tel" name="pjtelepon" id="pjtelepon" placeholder="08XXXXXXXXXX"><b id="pesan3"></b>
+				<br>
+				<!--email penanggung jawab-->
+				<label for="pjemail">Email :</label>
+				<br>
+				<input type="text" name="pjemail" id="pjemail" placeholder="example@gmail.com"><b id="pesan4"></b>
+				<br>
+				<!--alamat penanggung jawab-->
+				<label for="pjalamat">Alamat :</label><br>
+				<textarea id="pjalamat" name="pjalamat" cols="30" rows="2"></textarea><b id="pesan5"></b>
+				<h2>Tempat dan Reservasi</h2>
+				<hr>
+				<!--tanggal rservasi -->
+				<label for="tanggal">Tanggal :</label>
+				<br>
+				<input type="date" name="tanggal" id="tanggal"><b id="pesan6"></b>
+				<br>
+				<!--tempat rservasi -->
+				<label for="tipetempat">Tempat :</label>
+				<br>
+				<select id="tipetempat" name="tipetempat">
+					<option value="0">-- Pilih --</option>
+					<option value="1">Aula Paripurna(pleno)</option>
+					<option value="2">Aula Pameran</option>
+					<option value="3">Aula Pertemuan</option>
+					<option value="4">Ruang Pertemuan</option>
+				</select><b id="pesan7"></b>
+				<br><!--jumlah peserta rservasi -->
+				Jumlah Peserta : <b id="pesan8"></b>
+				<br>
+				<input type="radio" name="peserta" id="peserta0"><label>0~100</label>
+				<input type="radio" name="peserta" id="peserta1"><label>0~100</label>
+				<input type="radio" name="peserta" id="peserta2"><label>100~500</label>
+				<input type="radio" name="peserta" id="peserta3"><label>500~1000</label>
+				<input type="radio" name="peserta" id="peserta4"><label>1000~5000</label>
+				<br>
+				<!--rservasi lain-->
+				Lainnya : <b id="pesan9"></b>
+				<br>
+				<input type="checkbox" name="checkplus" id="checkplus1"><label>Layanan katering</label>
+				<br>
+				<input type="checkbox" name="checkplus" id="checkplus2"><label>Permintaan Gladi</label>
+				<br>
+				<input type="checkbox" name="checkplus" id="checkplus3"><label>Dekorasi</label>
+				<br>
+				<input type="checkbox" name="checkplus" id="checkplus4"><label>Ruang VIP</label>
+				<br>
+				<input type="checkbox" name="checkplus" id="checkplus5"><label>Not yet</label>
+				<hr>
+				<input type="submit" value="Submit" class="button-submit"  />
+				<input type="reset" value="Reset" class="button-reset" />
+				<br>&nbsp;           
+			</form>
+			<!--END FORM -->
+		</div>
+	</div>
+
+	<!--footer-->
+	<footer>
+		<div class="container">
+	    	<b>&copy; 2019 Copyright RNA-D Hall & Convention Center : All right reserved </b>|<a href="aboutus.html"> Contact us </a>| made with love
+	    	<br>in Bangkalan , East Java
+	    	<hr>
+	    	<i><sup> * designed by : DPW2018-2_D2</sup></i>
+		</div>
+	</footer>
+	<!--END footer -->
+
+</body>
+</html>

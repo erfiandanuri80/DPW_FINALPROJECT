@@ -1,118 +1,375 @@
-body{
-	width: 1280px;
+	
+body{ /*style pada bagian body*/
+	font-family: Tahoma;  
+	background-color: black;  
+	max-width: 1280px;  
+	margin: auto;  
+}
+a{ 
+	text-decoration: none;  
+	color: #fff;
+}
+
+.container{  /*mengatur spasi kanan dan kiri pada class container*/
+	padding-right: 5px;
+	padding-left: 5px;
+}
+header .container{  /*mengatur margin, lebar, tinggi, dan  baground pada class container di bagian header*/
+	margin: 10px 5px;
+	width: 100%;
+	min-height: 600px;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('images/bghead.png') center no-repeat; 
+	clear: both; 
+}
+
+
+header .container .logo{  /*mengatur lebar, margin , dan tata letak logo*/
+	width: 100%;
+	clear: both;
 	margin: auto;
-	padding: auto;
+	text-align:center;
+	padding-top: 250px;
+}
+header .container .logo b{  /*mengatur warna baground, jenis huruf, border,warna dan ukuran huruf pada tag b pada class logo*/
+	background-color: rgba(0,0,0,0.3);
+	font-family: Algerian;
+	border-bottom: 10px solid red;
+	color: white;
+	font-size: 50px;
+}
+
+header .container .logo .motto{  /*mengatur spasi, jenis huruf, lebar, margin,ukuran huruf, tata letak dan warna pada motto*/
+	padding-bottom: 230px;
+	font-family: chiller;
+	width: 25%;
+	clear: both;
+	margin: 10px auto;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+nav .container{ /*mengatur margin, jenis huruf, border, ukuran huruf,lebar, tinggi dan warna baground pada class container di bagian navigasi*/
+	margin: 0 5px;
+	font-family: Tahoma;
+	border-bottom: 5px solid red;
+	font-size: 15px;
+	width: 100%;
+	height: 50px;
+	clear: both;
 	background-color: black;
 }
 
-body h1 {
-	background-color: rgba(0,0,0,0.7);
+nav .container ul{  /*mengatur tag ul pada class container di bagian navigasi*/
+	display: block;
+}
+
+nav .container ul li{  /*mengatur lebar dan style pada tag ul dan li  pada class container di bagian navigasi*/
+	width: 90%;
+	list-style-type: none;
+}
+nav .container ul li a{  /*mengatur warna, tempat,dan spasi  pada tag ul, li, dan a  pada class container di bagian navigasi*/
 	color: white;
-	font-family: Verdana;
-	margin: 0px;
+	float: left;
+	padding: 10px 20px;
+	letter-spacing: 2px;
+}
+nav .container ul li a:hover, nav .container ul li a.nav-current{  /*mengatur warna, warna baground,posisi,dan spasi pada tag ul dan li  pada class container di bagian navigasi*/
+	color: red;
+	transition-duration: 0.8s;
+	background-color: white;
+	float: left;
+	padding: 15px 20px;
+	letter-spacing: 2px;
+}
+
+footer{  /*mengatur lebar, margin, warna baground pada footer*/
+	width: 100%;
+	margin: 10px 5px;
+	background-color: darkred;
+}
+footer .container{  /*mengatur tata letak, ukuran , dan warna pada footer*/
+	padding: 10px 20px;
+	clear: both;
+	font-size: 20px;
+	text-align: left;
+	color: white;
+}
+
+	/**********************\
+	\     CSS FOR HOME     /
+	 \********************/
+
+
+.content-home{  /*mengatur lebar class content*/
+	width: 70%;
+}
+.content-home .container{  /*mengatur spasi,lebar,posisi,ukuran huruf,warna, dan perataan pada class container di bagian class content*/
+	padding-right: 25px;
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/bghome.jpg') center no-repeat;
+	width: 100%;
+	float: left;
+	font-size: 16px;
+	color: white;
+	line-height:2.0;
+	text-align: justify;
+}
+.content-home .container h1{ /*mengatur spasi, perataan, dan ukuran huruf pada tag h1*/
+	padding-top: 35px;
+	text-align: center; 
+	font-size: 30px;
+}
+.content-home .container article{  /*mengatur border, lebar,ukuran maximal,spasi,jenis huruf dan baground pada tag article*/
+	border-bottom: 5px solid red;
+	width: 100%;
+	max-width: 805px;
+	padding: 0 50px;
+	font-family: Tahoma;
+}
+.content-home .container p{  /*mengatur lebar, spasi, pada tag p*/
+	width: 90%;
+	padding:40px 50px;
+}
+
+section .container{  /*mengatur spasi, lebar, margin, ukuran maximal,warna baground, dan warna huruf pada class container di bagian section*/
+	padding-right: 10px;
+	padding-bottom: 50px;
+	width: 100%;
+	margin: 10px 5px;
+	max-width: 1270px;
+	min-height: 600px;
+	clear: both;
+	background-color: #333;
+	color: white;
+}
+section .container h1{  /*mengatur ukuran huruf, perataan, pada tag h1 di class container*/
+	font-size: 30px;
+	text-align: center; 
+}
+
+section .container .box-model{ /*mengatur lebar, dan spasi pada box*/
+	width: 95%;
 	padding: 20px;
 }
-
-
-#navigasi-menu{
-	clear: both;
-}
-#navigasi-style{
-	font-family: Verdana;
-	font-size: 16px;
-	height: 50px;
-	background-color: #000000;
-	border-top: 10px solid #ff0000;
-
-}
-#navigasi-style ul{
-
-	list-style-type: none;
-	width: auto;
-
-}
-#navigasi-style li{
+section .container .box-left{ /*mengatur  posisi box bagian kiri*/
 	float: left;
-	display: inline-block;
-	margin: 0;
-
 }
-#navigasi-style b{
-	font-family: jokerman;
-	border:1px solid white
-	;
+section .container .box-right { /*mengatur  posisi box bagian kanan*/
+	float: right;
+}
+section .container .box-left img, section .container .box-right img{
+	border-right: 20px solid black; /*mengatur border,posisi,lebar,tinggi pada posisi box bagian kiri dan kanan*/
+	float: left;
+	border-radius: 50px;
+	width: 45%;
+	height: 70%;
+}
+section .container .box-right,section .container .box-left {  /*mengatur perataan,ukuran huruf,warna,lebar,tinggi dan margin pada posisi box bagian kiri dan kanan*/
+	text-align: justify;
+	font-size: 15px; 
 	color: white;
+	width: 40%;
+	height: 300px;
+	margin-right: 100px;
+}
+/*** SIDEBAR ***/
+.sidebar .container{  /*mengatur border,margin,warna baground,spasi,posisi, dan lebar pada class container di class sidebar*/
+	border-bottom: 5px solid red;
+	border-left:  5px solid red;
+	background-color: rgb(20,20,20);
+	padding: 21px 0;
+	float: right;
+	width: 27%;
+}
+.sidebar .container .sidebox{ /*mengatur warna baground,ukuran huruf,perataan,warna dan spasi pada class sidebox*/
+	background-color: #111;
+	font-size: 16px;
+	text-align: justify;
+	color: white;
+	padding: 10px 30px;
+}
+.sidebar .container .sidebox h3{  /*mengatur ukuran huruf,border,warna baground, pada tag h3 pada class sidebox*/
 	font-size: 18px;
-	margin-right: 20px;
-
+	border: 5px solid red;
+	background-color: red;
 }
-#navigasi-style a{
-	color: #ffffff;
+.sidebar .container .sidebox ul li {  /*mengatur ukuran huruf,style,jenis huruf, warna , dan spasi pada tag ul li  pada class sidebox*/
+	font-size: 18px;
+	list-style-type: square;
+	font-family: verdana;
+	color: white;
+	padding: 5px 0;
+}
+.sidebar .container .sidebox ul li a{  /*mengatur teks,warna,ukuran huruf, pada tag ul, li, a pada class sidebox*/
 	text-decoration: none;
-	padding-right: 20px;
-	padding-left: 20px;
-	border: 10px solid #000000;
-	height: 30px;
+	color: white;
+	font-size: 16px;
+}
+.sidebar .container .sidebox ul li a:hover{ /*mengatur teks,warna,ukuran huruf, pada tag ul, li, a pada class sidebox*/
+	text-decoration: none;
+	color: red;
+	font-size: 16px;
 }
 
-#navigasi-style a:hover, #navigasi-style a.first-navigasi{
-	color: #ff0000;
-	background-color: #ffffff;
-	border: 10px solid white;
+	/****************************\
+	\     CSS FOR ADD PROGRAM    /
+	 \**************************/
+
+.content-add{/*lebarcontent add*/
+	width: 100%;	
+}
+.content-add .container{/*mengatur & memodifikasi container add*/
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/bghome.jpg') center repeat;  
+	padding-right: 25px;
+	width: 100%;
+	padding-bottom: 50px;
+	float: left;
+	font-size: 16px;
+	color: white;
+	line-height:2.0;
+	text-align: justify;
+}
+.content-add .container h1{ /* mengatur h1 pada content*/
+	padding-top: 35px;
+	text-align: center; 
+	font-size: 30px;
+}
+.content-add .container form{/*mengatur form*/
+	width: 50%;
+	color: black;
+	margin: auto;
+	border: 10px solid maroon;
+	text-align: left;
+	padding: 0 50px;
+	background-color: rgba(200,200,200,0.6);
+}
+/* lebar id inputan*/
+#pjname,#pjjabatan,#pjtelepon,#pjemail,#pename,#tipetempat,#tipeevent,#tipepenyelenggara,#pjalamat,#adminstaff,#nameevent,#tanggal{
+	width: 50%;
 }
 
+/*mengatur heading pada dalm form*/
+.content-add .container form h2,h4{
+	color: darkred;
+	text-decoration: underline;
+	text-align: left;
+}
 
-p{
-	margin:0 10px 10px
-}
-.button-addprogram{
-	font-family: Verdana;
-	font-size: 20px;
-	height: 50px;
-}
-.button-addprogram a {
+.button-reset{/* style tomboh reset*/
 	font-family: Tahoma;
-	text-decoration: none;
-	display: block;
-	margin: auto;
-	width: 150px;
-	border: 5px solid white;
-	color: #ff0000;
-	background-color: #ffffff;
+	width: 100px;
+	color: #ffffff;
+	background-color: #c9302c;
+	border: 5px solid #ac2925;
 }
-.button-addprogram a:hover{
-	color: #000000;
-	background-color: #bbbbbb;
-	border: 5px solid #bbbbbb;
+.button-submit{/*style tombol submit*/
+	font-family: Tahoma;
+	width: 100px;
+	color: #ffffff;
+	background-color: #4286f4;
+	border: 5px solid #4286f4;
 }
 
-#container{
-	background-image: url("images/bgasli.jpg");
-	margin: auto;
-	border: 5px solid black;
-	width: 1270px;
-	height: 700px;
-	margin: auto;
-	
-	text-align: center;
-	padding: 0px;
+
+	/****************************\
+	\   CSS FOR IMAGE REFERENCE  /
+	 \**************************/
+
+.content-image{ /*mendeklarasikan class content*/
+	width: 100%; /*mengatur ukuran konten 100% dari 100%*/
 }
-#content{
-	padding: 100px;
-	height: 500px;
-	background-color: rgba(0,0,0,0.8);
+.content-image .container{ /*mendeklarasikan class .content-image .container*/
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/bghome.jpg') center no-repeat;
+	/*mengatur warna gambar background dan ditempatkan ditengah tanpa ada perulangan gambar*/ 
+	padding: 50px 10px; /*mengatur jarak teks dengan tepi bagian atas-bawah 50px dan kiri-kanan 10px*/
+	min-height: 500px; /*mengatur tinggi minimal 500px*/
+	width: 100%; /*mengatur lebar 100% dari 100%*/
+	float: left; /*mengatur posisi di sebelah kiri*/
+	color: white; /*megatur warna symbol menjadi warna putih*/
+	line-height:2.0; /*mengatur jarak antar baris*/ 
+	text-align: justify; /*mengatur paragraf rata kiri-kanan*/ 
+	font-size: 16px; /*mengatur teks berukuran 16px*/
 }
-#content p{
+.content-image h1,h3{ /*mendeklarasikan class .content-image h1,h3*/
+	background-color: transparent; /*mengatur background-color menjadi transparan*/
+	color: white; /*mengatur warna teks menjadi warna putih*/ 
+	text-align: center; /*mengatur posisi teks menjadi di tengah*/
+}
+
+.content-image .container ul li a,a:hover { /*mendeklarasikan class .content-image .container ul li a,a:hover*/ 
+	transition-duration: 0.4s; /*mengatur lama waktu efek saat user mengarahkna cursor pada teks*/
+}
+.content-image .container ul li a{ /*mendeklarasikan class .content-image .container ul li a*/
+	color: red; /*mengatur warna teks menjadi warna merah*/
+}
+.content-image .container ul li a:hover{ /*mendeklarasikan class .content-image .container ul li a:hover*/
+	color: black; /*mengubah warna teks menjadi hitam saat user mengarahkna cursor pada teks*/
+	background-color: #b90b0b; /*mengubah warna background pada teks menjadi 
+	#b90b0b saat user mengarahkna cursor pada teks*/ 
+}
+
+	/****************************\
+	\      CSS FOR ABOUT US      /
+	 \**************************/
+
+.content-about{
+	width: 100%;
+}
+
+.content-about .container{/*mengatur spasi,lebar,posisi,ukuran huruf,warna, dan perataan pada class container di bagian class content*/
+	margin: 20px 5px;
+	padding-bottom: 50px;
+	margin-bottom: 20px;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('images/bghome.jpg') center repeat;
+	width: 100%;
+	float: left;
+	font-size: 16px;
 	color: white;
-	line-height:1.5}
-#content h1{
+	line-height:2.0;
+	text-align: justify;
+}
+.content-about .container h1{/*mengatur spasi, perataan, dan ukuran huruf pada tag h1*/
+	padding-top: 35px;
+	text-align: center; 
+	font-size: 30px;
+}
+
+
+.content-about h1,h3{/*mengatur spasi atas,tranparans baground,warna huruf dan letaknya di h1,h3 pada class content*/
+	padding-top: 0px;
 	background-color: transparent;
-}
-
-#footer{
-	font-family: Verdana;
-	width: 1280px;
-	margin: auto;
 	color: white;
 	text-align: center;
+}
+
+
+.tabel-kelompok {/* mengatur lebar, spasi,margin,gaya dan warna huruf pada class tabel-kelompok*/
+	width: 90%;
+	padding: 10px 20px;
+	margin: auto;
+	margin-top: 50px;
+    font-family: sans-serif;
+    color: white;
+}
+.tabel-kelompok img{/* mengatur lebar, tinggi dan border img bagian class tabel-kelompok*/
+	width: 40%;
+	height: 40%;
+	border: 10px solid black;
+}
+.kolom-left{/* tata letak, margin pada kolom-left*/
+	float: left;
+	margin-left:100px;	
+}
+.kolom-right{/* tata letak , margin pada kolom-right*/
+	margin-right: 100px;
+	float: right;
+}
+.kolom-left ul li, .kolom-right ul li{/* mengatur warna, ukuran dan perataan huruf*/
+	color: white;
+	font-size: 14px;
+	text-align: left;
+}
+.kolom-right, .kolom-left{/* mengatur lebar, border bawah dan warna pada border*/
+	width: 35%;
+	border-bottom: 5px solid white;
 }
